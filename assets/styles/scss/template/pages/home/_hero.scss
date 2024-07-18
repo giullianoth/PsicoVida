@@ -1,0 +1,74 @@
+@include theme() {
+    &hero {
+        @include containerFluid;
+        @include backgroundImage("bg_s/banner-inicial-psicovida.jpg", no-repeat, cover, left);
+        background-color: $color-dark-mint;
+        padding-block: 100px;
+
+        @include setResponsiveDesign($breakpoint-tablet) {
+            background-position: center center;
+        }
+
+        &__container {
+            @include container;
+            @include flex;
+
+            @include setResponsiveDesign($breakpoint-tablet) {
+                min-height: 800px;
+                justify-content: flex-start;
+            }
+        }
+
+        &__content {
+            @include flex1;
+            @include container(600px, 0);
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-mobile) {
+                text-align: start;
+            }
+
+            @include setResponsiveDesign($breakpoint-tablet) {
+                @include flexBasis(70%);
+                max-width: auto;
+                margin: 0;
+            }
+        }
+
+        &__title {
+            font-size: 3em;
+            margin-bottom: 20px;
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                font-size: 3.6em;
+            }
+
+            @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                font-size: 4em;
+            }
+        }
+
+        &__headline {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+
+            @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                font-size: 1.8em;
+            }
+        }
+
+        &__cta {
+            font-weight: 600;
+            width: 100%;
+
+            @include setResponsiveDesign($breakpoint-mobile) {
+                font-size: 1.2em;
+                width: auto;
+            }
+
+            @include setResponsiveDesign($breakpoint-tablet) {
+                padding: 20px 60px;
+            }
+        }
+    }
+}
