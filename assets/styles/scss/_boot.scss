@@ -105,17 +105,30 @@ input, textarea {
         }
     }
 
-    &section-model-1 {
+    &section-model1 {
         @include flex;
         flex-direction: column;
         gap: 40px;
+        padding-block: 60px;
 
         @include container(600px, 0);
+
+        @include setResponsiveDesign($breakpoint-mobile-landscape) {
+            padding-block: 100px;
+        }
 
         @include setResponsiveDesign($breakpoint-tablet-landscape) {
             max-width: none;
             flex-direction: row;
             flex-wrap: nowrap
+        }
+
+        &-alt {
+            background-color: $color-accent;
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                flex-direction: row-reverse;
+            }
         }
 
         .image {

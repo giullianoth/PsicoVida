@@ -6,5 +6,9 @@
         &__container {
             @include container;
         }
+
+        &__content {
+            padding-block: 0 !important;
+        }
     }
 }

@@ -20,7 +20,7 @@
     margin-inline: auto;
 }
 
-@mixin sectionClearance($clearance: 80px, $minClearance: 60px) {
+@mixin sectionClearance($clearance: 100px, $minClearance: 60px) {
     padding-block: $clearance;
 
     @include setResponsiveDesign($breakpoint-mobile-landscape, true) {
