@@ -95,9 +95,60 @@ input, textarea {
             margin-left: auto;
             margin-right: auto;
         }
+
+        &-title {            
+            margin-inline: auto;
+
+            @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                margin-inline: 0;
+            }
+        }
+    }
+
+    &section-model-1 {
+        @include flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include container(600px, 0);
+
+        @include setResponsiveDesign($breakpoint-tablet-landscape) {
+            max-width: none;
+            flex-direction: row;
+            flex-wrap: nowrap
+        }
+
+        .image {
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                @include flex2;
+            }
+
+            img {
+                @include borderRadius;
+            }
+        }
+
+        .content {
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                @include flex2;
+            }
+
+            .info {
+                margin-bottom: 20px;
+            }
+        }
+
+        .button {
+            width: 100%;
+
+            @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                width: auto;
+            }
+        }
     }
 }
 
 @import "template/header";
 
 @import "template/pages/home/hero";
+@import "template/pages/home/about";

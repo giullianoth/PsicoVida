@@ -20,6 +20,14 @@
     margin-inline: auto;
 }
 
+@mixin sectionClearance($clearance: 80px, $minClearance: 60px) {
+    padding-block: $clearance;
+
+    @include setResponsiveDesign($breakpoint-mobile-landscape, true) {
+        padding-block: $minClearance;
+    }
+}
+
 // BROWSER CORES ATTRIBUTES
 @mixin setBrowserCores($attr, $value, $cores: ("moz", "webkit")) {
     #{$attr}: #{$value};
@@ -30,7 +38,7 @@
 }
 
 // BORDER RADIUS
-@mixin borderRadius($radius: $radius-default) {
+@mixin borderRadius($radius: 20px) {
     @include setBrowserCores(border-radius, $radius);
 }
 
@@ -125,6 +133,14 @@
 // TRANSITIONS AND ANIMATIONS
 @mixin transition($property: all, $duration: 300ms, $timingFunction: ease, $delay: 0s) {
     transition: $property $duration $timingFunction $delay;
+}
+
+@mixin grow() {
+    @include transition;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 // RESPONSIVE DESIGN

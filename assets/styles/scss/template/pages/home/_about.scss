@@ -1,0 +1,10 @@
+@include theme() {
+    &about {
+        @include containerFluid;
+        @include sectionClearance;
+
+        &__container {
+            @include container;
+        }
+    }
+}
