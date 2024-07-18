@@ -1,0 +1,58 @@
+@include theme() {
+    &services {
+        @include containerFluid;
+        @include sectionClearance;
+        background-color: $color-accent;
+
+        @include backgroundOverlay("bg_s/bg.jpg");
+
+        &__container {
+            @include container;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+
+            h1 {
+                text-align: center !important;
+            }
+        }
+
+        &__list {
+            @include flex(flex-start, stretch);
+            gap: 20px;
+        }
+
+        &__item {
+            @include flex1;
+            text-align: center;
+            background-color: $color-white;
+            padding: 20px;
+            @include borderRadius;
+
+            @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                @include flex2(20px);
+            }
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                @include flex3(20px);
+            }
+
+            &-image {
+                margin-bottom: 20px;
+
+                img {
+                    @include borderRadius(10px);
+                }
+            }
+
+            &-title {
+                margin-bottom: 20px;
+
+                h2 {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+}

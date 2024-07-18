@@ -57,6 +57,7 @@
 @mixin flexBasis($basis, $gap: 0) {
     @if $gap !=0 {
         flex-basis: calc($basis - $gap);
+        flex-grow: 1;
     }
 
     @else {
@@ -69,15 +70,15 @@
 }
 
 @mixin flex2($gap: 0) {
-    @include flexBasis(calc(100% / 2), calc($gap + ($gap / 2)));
+    @include flexBasis(calc(100% / 2), $gap);
 }
 
 @mixin flex3($gap: 0) {
-    @include flexBasis(calc(100% / 3), calc($gap + ($gap / 3)));
+    @include flexBasis(calc(100% / 3), $gap);
 }
 
 @mixin flex4($gap: 0) {
-    @include flexBasis(calc(100% / 4), calc($gap + ($gap / 4)));
+    @include flexBasis(calc(100% / 4), $gap);
 }
 
 // POSITION
@@ -95,7 +96,7 @@
 
 @mixin absoluteFull($top: 0, $left: 0, $fillScreen: false) {
     @include absolute($top, $left);
-    @include fullWidthContainer($fillScreen);
+    @include containerFluid($fillScreen);
 }
 
 // Fixed
@@ -116,17 +117,23 @@
     background-position: $position;
 }
 
-@mixin backgroundOverlay($image: "", $repeat: no-repeat, $size: cover, $position: center center, $opacity: 0.1, $blendMode: multiply) {
+@mixin backgroundOverlay($image: "", $attachment: fixed, $repeat: no-repeat, $size: cover, $position: center center, $opacity: 0.1, $blendMode: multiply) {
     @include relative;
+
+    & > * {
+        position: relative;
+        z-index: 3;
+    }
 
     &::before {
         content: "";
-        @include absoluteFull;
+        @include absoluteFull(0, 0, true);
         z-index: 0;
         opacity: $opacity;
         mix-blend-mode: $blendMode;
 
         @include backgroundImage($image, $repeat, $size, $position);
+        background-attachment: $attachment;
     }
 }
 

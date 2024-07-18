@@ -91,7 +91,7 @@ input, textarea {
         background-color: $color-dark-mint;
         margin-bottom: 10px;
 
-        &.centered {
+        &-centered {
             margin-left: auto;
             margin-right: auto;
         }
@@ -165,3 +165,4 @@ input, textarea {
 
 @import "template/pages/home/hero";
 @import "template/pages/home/about";
+@import "template/pages/home/services";

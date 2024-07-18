@@ -90,7 +90,7 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
   background-color: #B5DDD0;
   margin-bottom: 10px;
 }
-.pv-divider.centered {
+.pv-divider-centered {
   margin-left: auto;
   margin-right: auto;
 }
@@ -388,4 +388,89 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
 }
 .pv-about__content {
   padding-block: 0 !important;
+}
+
+.pv-services {
+  width: 100%;
+  padding-block: 100px;
+  background-color: #FEF8EC;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .pv-services {
+    padding-block: 60px;
+  }
+}
+.pv-services > * {
+  position: relative;
+  z-index: 3;
+}
+.pv-services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.1;
+  mix-blend-mode: multiply;
+  background-image: url("../../../assets/images/bg_s/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.pv-services__container {
+  max-width: 1200px;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+.pv-services__title {
+  margin-bottom: 40px;
+}
+.pv-services__title h1 {
+  text-align: center !important;
+}
+.pv-services__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.pv-services__item {
+  flex-basis: 100%;
+  text-align: center;
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+@media screen and (min-width: 600px) {
+  .pv-services__item {
+    flex-basis: calc(50% - 20px);
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 900px) {
+  .pv-services__item {
+    flex-basis: calc(33.3333333333% - 20px);
+    flex-grow: 1;
+  }
+}
+.pv-services__item-image {
+  margin-bottom: 20px;
+}
+.pv-services__item-image img {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.pv-services__item-title {
+  margin-bottom: 20px;
+}
+.pv-services__item-title h2 {
+  color: #D8767B;
 }
