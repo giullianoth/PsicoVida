@@ -14,7 +14,7 @@
     }
 }
 
-@mixin container($maxWidth: 1200px, $sideClearance: 20px) {
+@mixin container($maxWidth: 1200px, $sideClearance: 15px) {
     max-width: $maxWidth;
     padding-inline: $sideClearance;
     margin-inline: auto;

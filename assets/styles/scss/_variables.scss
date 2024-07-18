@@ -11,3 +11,16 @@ $color-white: #FFF;
 // FONTS
 $font-primary: "Yeseva One", serif;
 $font-secondary: "Josefin Sans", sans-serif;
+
+// LAYOUT AND BREAKPOINTS
+$layout-mobile: 375px;
+$layout-desktop: 1440px;
+
+$breakpoint-mobile: 480px;
+$breakpoint-mobile-landscape: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-landscape: 900px;
+$breakpoint-desktop-sd: 1024px;
+$breakpoint-desktop-hd1: 1366px;
+$breakpoint-desktop-hd2: $layout-desktop;
+$breakpoint-desktop-fhd: 1920px;

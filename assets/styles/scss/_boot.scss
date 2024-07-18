@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    @include setBrowserCores(box-sizing, border-box);
+}
+
+body {
+    font-family: $font-secondary;
+    font-size: 1rem;
+    color: $color-text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $color-primary;
+    font-family: $font-primary;
+    font-weight: 600;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    @include setBrowserCores(object-fit, cover, "o");
+}
+
+input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    padding: 8px;
+    border: 1px solid rgba(47, 85, 96, 0.4);
+    resize: none;
+    outline: none;
+    border-radius: 10px;
+
+    &::-webkit-input-placeholder, &::placeholder {
+        color: #CCC;
+    }
+}
+
+@include theme() {
+    &section-title {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+        text-align: center;
+
+        @include setResponsiveDesign($breakpoint-mobile-landscape) {
+            text-align: start;
+            font-size: 1.6em;
+        }
+    }
+
+    &button {
+        font-family: $font-secondary;
+        font-weight: 600;
+        font-size: inherit;
+        color: $color-white;
+        background-color: $color-secondary;
+        border-radius: 30px;
+        padding: 14px 28px;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        @include transition;
+
+        &:hover {
+            background-color: $color-pink-hover;
+        }
+
+        & i {
+            margin-right: 10px;
+        }
+    }
+
+    &divider {
+        width: 60px;
+        height: 5px;
+        background-color: $color-dark-mint;
+        margin-bottom: 10px;
+
+        &.centered {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@import "template/header";
