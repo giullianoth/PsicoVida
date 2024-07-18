@@ -12,4 +12,10 @@ export default function MenuCollapse() {
             slideUp(menu)
         }
     })
+
+    window.addEventListener("resize", () => {
+        if (window.outerWidth >= 900) {
+            menu.style.display = ""
+        }
+    })
 }
