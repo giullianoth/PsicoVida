@@ -341,6 +341,11 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
     padding-block: 60px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .pv-footer {
+    padding-block: 60px;
+  }
+}
 .pv-footer h1 {
   color: #FFF;
 }

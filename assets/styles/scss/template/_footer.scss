@@ -5,6 +5,10 @@
         background-color: $color-primary;
         color: rgba(255, 255, 255, 0.7);
 
+        @include setResponsiveDesign($breakpoint-desktop-sd, true) {
+            padding-block: 60px;
+        }
+
         h1 {
             color: $color-white;
         }
