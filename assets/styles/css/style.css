@@ -160,6 +160,55 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
     width: auto;
   }
 }
+.pv-card-model1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  max-width: 460px;
+  padding-inline: 0;
+  margin-inline: auto;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  overflow: hidden;
+  background-color: #F1F8F6;
+  box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 768px) {
+  .pv-card-model1 {
+    max-width: 900px;
+    flex-direction: row;
+  }
+}
+.pv-card-model1 .image figure, .pv-card-model1 .image img {
+  width: 100%;
+  height: 100%;
+}
+.pv-card-model1 .content {
+  flex-basis: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 40px;
+}
+.pv-card-model1 .title {
+  font-size: 1.2em;
+}
+.pv-card-model1 .text {
+  margin-bottom: 20px;
+}
+.pv-card-model1 .button {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .pv-card-model1 .button {
+    width: auto;
+  }
+}
 
 .pv-header {
   width: 100%;
@@ -473,4 +522,19 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
 }
 .pv-services__item-title h2 {
   color: #D8767B;
+}
+
+.pv-cta {
+  width: 100%;
+  padding-block: 100px;
+}
+@media screen and (max-width: 600px) {
+  .pv-cta {
+    padding-block: 60px;
+  }
+}
+.pv-cta__container {
+  max-width: 1200px;
+  padding-inline: 15px;
+  margin-inline: auto;
 }

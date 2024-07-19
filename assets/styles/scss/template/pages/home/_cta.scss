@@ -1,0 +1,10 @@
+@include theme() {
+    &cta {
+        @include containerFluid;
+        @include sectionClearance;
+
+        &__container {
+            @include container;
+        }
+    }
+}

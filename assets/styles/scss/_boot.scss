@@ -159,6 +159,51 @@ input, textarea {
             }
         }
     }
+
+    &card-model1 {
+        @include flex(flex-start, stretch, nowrap);
+        flex-direction: column;
+        @include container(460px, 0);
+        @include borderRadius(30px);
+        overflow: hidden;
+        background-color: $color-light-mint;
+        box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.1);
+
+        @include setResponsiveDesign($breakpoint-tablet) {
+            max-width: 900px;
+            flex-direction: row;
+        }
+
+        .image {
+            figure, img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .content {
+            @include flexBasis(60%);
+            @include flex(center, flex-start);
+            flex-direction: column;
+            padding: 40px;
+        }
+
+        .title {
+            font-size: 1.2em;
+        }
+
+        .text {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            width: 100%;
+
+            @include setResponsiveDesign($breakpoint-tablet) {
+                width: auto;
+            }
+        }
+    }
 }
 
 @import "template/header";
@@ -166,3 +211,4 @@ input, textarea {
 @import "template/pages/home/hero";
 @import "template/pages/home/about";
 @import "template/pages/home/services";
+@import "template/pages/home/cta";
