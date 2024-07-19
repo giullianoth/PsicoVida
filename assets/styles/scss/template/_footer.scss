@@ -1,0 +1,130 @@
+@include theme() {
+    &footer {
+        @include containerFluid;
+        @include sectionClearance;
+        background-color: $color-primary;
+        color: rgba(255, 255, 255, 0.7);
+
+        h1 {
+            color: $color-white;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        &__container {
+            @include container;
+            @include flex(flex-start, stretch);
+            gap: 40px;
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                column-gap: 20px;
+            }
+        }
+
+        &__presentation {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                @include flexBasis(30%);
+                flex-grow: 0;
+            }
+        }
+
+        &__logo {
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+
+                @include setResponsiveDesign($breakpoint-mobile) {
+                    width: auto;
+                }
+            }
+        }
+
+        &__presentation-text {
+            margin-bottom: 10px;
+        }
+
+        &__social {
+            @include flex(flex-start);
+            gap: 10px;
+
+            a {
+                color: $color-white;
+                font-size: 1.4em;
+                width: 40px;
+                height: 40px;
+                background-color: $color-secondary;
+                @include rounded;
+                @include flex;
+                @include grow;
+            }
+        }
+
+        &__navigation {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                @include flex2(40px);
+            }
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                @include flexBasis(30%);
+                flex-grow: 0;
+            }
+        }
+
+        &__contact {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                @include flex2(40px);
+            }
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                @include flexBasis(30%);
+                flex-grow: 0;
+            }
+        }
+
+        &__title {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+
+        &__list {
+            li {
+                @include flex(flex-start, center, nowrap);
+                gap: 10px;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+
+                .icon {
+                    font-size: 0.7em;
+                }
+            }
+        }
+
+        &__attribution {
+            padding-inline: 15px;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.8em;
+
+            a {
+                color: $color-secondary;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

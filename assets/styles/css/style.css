@@ -330,6 +330,148 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
   }
 }
 
+.pv-footer {
+  width: 100%;
+  padding-block: 100px;
+  background-color: #2F5560;
+  color: rgba(255, 255, 255, 0.7);
+}
+@media screen and (max-width: 600px) {
+  .pv-footer {
+    padding-block: 60px;
+  }
+}
+.pv-footer h1 {
+  color: #FFF;
+}
+.pv-footer a {
+  color: inherit;
+}
+.pv-footer__container {
+  max-width: 1200px;
+  padding-inline: 15px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .pv-footer__container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+}
+.pv-footer__presentation {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .pv-footer__presentation {
+    flex-basis: 30%;
+    flex-grow: 0;
+  }
+}
+.pv-footer__logo {
+  margin-bottom: 20px;
+}
+.pv-footer__logo img {
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .pv-footer__logo img {
+    width: auto;
+  }
+}
+.pv-footer__presentation-text {
+  margin-bottom: 10px;
+}
+.pv-footer__social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pv-footer__social a {
+  color: #FFF;
+  font-size: 1.4em;
+  width: 40px;
+  height: 40px;
+  background-color: #D8767B;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 300ms ease 0s;
+}
+.pv-footer__social a:hover {
+  transform: scale(1.1);
+}
+.pv-footer__navigation {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 600px) {
+  .pv-footer__navigation {
+    flex-basis: calc(50% - 40px);
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pv-footer__navigation {
+    flex-basis: 30%;
+    flex-grow: 0;
+  }
+}
+.pv-footer__contact {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 600px) {
+  .pv-footer__contact {
+    flex-basis: calc(50% - 40px);
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pv-footer__contact {
+    flex-basis: 30%;
+    flex-grow: 0;
+  }
+}
+.pv-footer__title {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+.pv-footer__list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.pv-footer__list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.pv-footer__list li .icon {
+  font-size: 0.7em;
+}
+.pv-footer__attribution {
+  padding-inline: 15px;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 0.8em;
+}
+.pv-footer__attribution a {
+  color: #D8767B;
+}
+.pv-footer__attribution a:hover {
+  text-decoration: underline;
+}
+
 .pv-hero {
   width: 100%;
   background-image: url("../../../assets/images/bg_s/banner-inicial-psicovida.jpg");
