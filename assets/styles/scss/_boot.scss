@@ -253,7 +253,11 @@ input, textarea {
             @include flexBasis(60%);
             @include flex(center, flex-start);
             flex-direction: column;
-            padding: 40px;
+            padding: 40px 20px 20px 20px;
+
+            @include setResponsiveDesign($breakpoint-mobile) {
+                padding: 40px;
+            }
         }
 
         .title {
