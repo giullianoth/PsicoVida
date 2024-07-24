@@ -148,13 +148,13 @@ input, textarea {
             flex-wrap: nowrap
         }
 
-        &-alt {
-            background-color: $color-accent;
+        // &-alt {
+        //     background-color: $color-accent;
 
-            @include setResponsiveDesign($breakpoint-tablet-landscape) {
-                flex-direction: row-reverse;
-            }
-        }
+        //     @include setResponsiveDesign($breakpoint-tablet-landscape) {
+        //         flex-direction: row-reverse;
+        //     }
+        // }
 
         .image {
             @include setResponsiveDesign($breakpoint-tablet-landscape) {
@@ -284,3 +284,5 @@ input, textarea {
 
 @import "template/pages/sobre/about";
 @import "template/pages/sobre/specialists";
+
+@import "template/pages/servicos/services";

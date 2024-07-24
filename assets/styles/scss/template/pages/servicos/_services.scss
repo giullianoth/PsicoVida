@@ -1,0 +1,21 @@
+@include theme() {
+    &page-services {
+        @include containerFluid;
+
+        &__service {
+            &.alt {
+                background-color: $color-accent;
+
+                .pv-section-model1 {
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+        }
+
+        &__container {
+            @include container;
+        }
+    }
+}
