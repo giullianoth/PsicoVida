@@ -1,8 +1,7 @@
 @include theme() {
-    &services {
+    &specialists {
         @include containerFluid;
         @include sectionClearance;
-        @include backgroundOverlay("bg_s/bg.jpg");
 
         &__container {
             @include container;
@@ -10,12 +9,14 @@
 
         &__item {
             @include setResponsiveDesign($breakpoint-tablet-landscape) {
-                flex-basis: calc((100% / 3) - 20px) !important;
+                flex-basis: calc((100% / 4) - 20px) !important;
             }
 
             &-image {
                 img {
-                    @include borderRadius(10px);
+                    width: 140px;
+                    height: 140px;
+                    @include rounded;
                 }
             }
         }

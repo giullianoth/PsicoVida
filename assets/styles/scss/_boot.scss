@@ -62,6 +62,31 @@ input, textarea {
         }
     }
 
+    &page-title {
+        @include containerFluid;
+        @include sectionClearance;
+        background-color: $color-dark-mint;
+
+        @include backgroundOverlay("bg_s/bg.jpg");
+        z-index: 1;
+
+        &::after {
+            content: "";
+            @include absoluteFull(0, 0, true);
+            z-index: 2;
+            background-image: linear-gradient(to tight, $color-dark-mint, transparent);
+        }
+
+        .pv-divider {
+            background-color: $color-secondary;
+            margin-top: 10px;
+        }
+
+        .container {
+            @include container
+        }
+    }
+
     &button {
         font-family: $font-secondary;
         font-weight: 600;
@@ -160,6 +185,49 @@ input, textarea {
         }
     }
 
+    &section-model2 {
+        background-color: $color-accent;
+
+        .title {
+            margin-bottom: 40px;
+
+            h1 {
+                text-align: center !important;
+            }
+        }
+
+        .list {
+            @include flex(flex-start, stretch);
+            gap: 20px;
+        }
+
+        .item {
+            @include container($breakpoint-mobile);
+            @include flex1;
+            text-align: center;
+            background-color: $color-white;
+            padding: 20px;
+            @include borderRadius;
+
+            @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                @include flex2(20px);
+                max-width: none;
+            }
+
+            &-image {
+                margin-bottom: 20px;
+            }
+
+            &-title {
+                margin-bottom: 20px;
+
+                h2 {
+                    color: $color-secondary;
+                }
+            }
+        }        
+    }
+
     &card-model1 {
         @include flex(flex-start, stretch, nowrap);
         flex-direction: column;
@@ -213,3 +281,6 @@ input, textarea {
 @import "template/pages/home/about";
 @import "template/pages/home/services";
 @import "template/pages/home/cta";
+
+@import "template/pages/sobre/about";
+@import "template/pages/sobre/specialists";

@@ -1,0 +1,14 @@
+@include theme() {
+    &page-about {
+        @include containerFluid;
+        @include sectionClearance;
+
+        &__container {
+            @include container;
+        }
+
+        &__content {
+            padding-block: 0;
+        }
+    }
+}
