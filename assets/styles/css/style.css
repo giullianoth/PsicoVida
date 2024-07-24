@@ -68,7 +68,6 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
   width: 100%;
   padding-block: 100px;
   background-color: #B5DDD0;
-  font-size: 1.6em;
   position: relative;
   z-index: 1;
 }
@@ -98,6 +97,11 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
   background-attachment: fixed;
 }
 @media screen and (min-width: 600px) {
+  .pv-page-title {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 900px) {
   .pv-page-title {
     font-size: 2.2em;
   }

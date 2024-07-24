@@ -66,12 +66,15 @@ input, textarea {
         @include containerFluid;
         @include sectionClearance;
         background-color: $color-dark-mint;
-        font-size: 1.6em;
 
         @include backgroundOverlay("bg_s/bg.jpg");
         z-index: 1;
 
         @include setResponsiveDesign($breakpoint-mobile-landscape) {
+            font-size: 1.6em;
+        }
+
+        @include setResponsiveDesign($breakpoint-tablet-landscape) {            
             font-size: 2.2em;
         }
 
