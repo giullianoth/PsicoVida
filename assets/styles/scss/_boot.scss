@@ -66,9 +66,14 @@ input, textarea {
         @include containerFluid;
         @include sectionClearance;
         background-color: $color-dark-mint;
+        font-size: 1.6em;
 
         @include backgroundOverlay("bg_s/bg.jpg");
         z-index: 1;
+
+        @include setResponsiveDesign($breakpoint-mobile-landscape) {
+            font-size: 2.2em;
+        }
 
         &::after {
             content: "";
@@ -147,14 +152,6 @@ input, textarea {
             flex-direction: row;
             flex-wrap: nowrap
         }
-
-        // &-alt {
-        //     background-color: $color-accent;
-
-        //     @include setResponsiveDesign($breakpoint-tablet-landscape) {
-        //         flex-direction: row-reverse;
-        //     }
-        // }
 
         .image {
             @include setResponsiveDesign($breakpoint-tablet-landscape) {
@@ -272,6 +269,25 @@ input, textarea {
             }
         }
     }
+
+    &form-control {
+        @include containerFluid;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        & > * {
+            display: block;
+            @include containerFluid;
+        }
+
+        label {
+            margin-bottom: 7px;
+            font-size: 0.875em;
+            color: $color-primary;
+        }
+    }
 }
 
 @import "template/header";
@@ -286,3 +302,6 @@ input, textarea {
 @import "template/pages/sobre/specialists";
 
 @import "template/pages/servicos/services";
+
+@import "template/pages/contato/contact";
+@import "template/pages/contato/map";

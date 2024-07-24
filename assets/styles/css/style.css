@@ -68,6 +68,7 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
   width: 100%;
   padding-block: 100px;
   background-color: #B5DDD0;
+  font-size: 1.6em;
   position: relative;
   z-index: 1;
 }
@@ -95,6 +96,11 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+}
+@media screen and (min-width: 600px) {
+  .pv-page-title {
+    font-size: 2.2em;
+  }
 }
 .pv-page-title::after {
   content: "";
@@ -295,6 +301,21 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
   .pv-card-model1 .button {
     width: auto;
   }
+}
+.pv-form-control {
+  width: 100%;
+}
+.pv-form-control:not(:last-child) {
+  margin-bottom: 12px;
+}
+.pv-form-control > * {
+  display: block;
+  width: 100%;
+}
+.pv-form-control label {
+  margin-bottom: 7px;
+  font-size: 0.875em;
+  color: #2F5560;
 }
 
 .pv-header {
@@ -794,4 +815,32 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
   max-width: 1200px;
   padding-inline: 15px;
   margin-inline: auto;
+}
+
+.pv-page-contact {
+  width: 100%;
+  padding-block: 100px;
+}
+@media screen and (max-width: 600px) {
+  .pv-page-contact {
+    padding-block: 60px;
+  }
+}
+.pv-page-contact__container {
+  max-width: 1200px;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+.pv-page-contact__form {
+  margin-top: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .pv-page-contact__form {
+    width: 75%;
+  }
+}
+
+.pv-page-map {
+  width: 100%;
 }

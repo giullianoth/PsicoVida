@@ -1,0 +1,19 @@
+@include theme() {
+    &page-contact {
+        @include containerFluid;
+        @include sectionClearance;
+
+        &__container {
+            @include container;
+        }
+
+        &__form {
+            margin-top: 20px;
+            @include containerFluid;
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                width: 75%;
+            }
+        }
+    }
+}
