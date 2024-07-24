@@ -307,11 +307,11 @@ input::-webkit-input-placeholder, input::placeholder, textarea::-webkit-input-pl
 
 .pv-header {
   width: 100%;
-  position: relative;
 }
 .pv-header__background {
   background-color: #2F5560;
   padding-block: 15px;
+  position: relative;
 }
 @media screen and (min-width: 900px) {
   .pv-header__background {

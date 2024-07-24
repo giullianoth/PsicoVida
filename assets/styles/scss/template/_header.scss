@@ -1,11 +1,11 @@
 @include theme() {
     &header {
         @include containerFluid;
-        @include relative;
 
         &__background {
             background-color: $color-primary;
             padding-block: 15px;
+            @include relative;
 
             @include setResponsiveDesign($breakpoint-tablet-landscape) {
                 padding-block: 0;
